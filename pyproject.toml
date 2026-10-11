@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "script-chain-walk"
+version = "0.1.0"
+description = "Trace cross-file script call chains: build a dependency graph of shell/Python scripts, find broken chains and call cycles"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+script-chain-walk = "script_chain_walk.cli:main"
+walk = "script_chain_walk.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/script-chain-walk"
+
+[tool.setuptools.packages.find]
+where = ["src"]
